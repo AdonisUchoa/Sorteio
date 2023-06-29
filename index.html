@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sorteio de Email</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Sorteio de Email</h2>
+    <p>Insira os emails abaixo (um por linha) ou anexe um arquivo .xlsx:</p>
+    <textarea id="emailList" rows="6"></textarea>
+    <input type="file" id="fileInput" accept=".xlsx">
+    <button class="button" onclick="realizarSorteio()">Realizar Sorteio</button>
+    <h3>Vencedor do Sorteio:</h3>
+    <p id="vencedor" class="winner"></p>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <h2>Parabéns!</h2>
+      <p>O ganhador do sorteio é:</p>
+      <p id="modalWinner" class="winner"></p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
